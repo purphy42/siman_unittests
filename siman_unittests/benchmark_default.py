@@ -634,9 +634,9 @@ def additional_cases(li, mno):
         return f'{paths[key]} closed'
 
     add('vesta()', lambda: open_viewer('vesta'), str,
-        'open the Li cell in VESTA using PATH2VESTA from cp_li_llzo')
+        'open the Li cell in VESTA using PATH2VESTA from project_conf.py')
     add('jmol()', lambda: open_viewer('jmol'), str,
-        'open the Li cell in Jmol using PATH2JMOL from cp_li_llzo')
+        'open the Li cell in Jmol using PATH2JMOL from project_conf.py')
 
     if len(cases) != len(_ADDITIONAL):
         raise RuntimeError(f'{len(cases)} additional tests, expected {len(_ADDITIONAL)}')

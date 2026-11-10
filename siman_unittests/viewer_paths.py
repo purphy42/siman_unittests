@@ -7,14 +7,22 @@ import time
 from pathlib import Path
 
 
-SOURCE = Path(__file__).resolve().parent.parent / 'project_conf.py'
 NAMES = ('PATH2JMOL', 'PATH2VESTA', 'PATH2OVITO')
+
+
+def config_file():
+    """project_conf.py when it exists, otherwise the example shipped with the tests."""
+    root = Path(__file__).resolve().parent.parent
+    chosen = root / 'project_conf.py'
+    if chosen.is_file():
+        return chosen
+    return root / 'project_conf.example.py'
 
 
 def viewer_paths():
     """Read PATH2JMOL, PATH2VESTA, and PATH2OVITO without loading the project."""
     found = {}
-    for line in SOURCE.read_text(encoding='utf-8').splitlines():
+    for line in config_file().read_text(encoding='utf-8').splitlines():
         code = line.split('#', 1)[0].strip()
         if '=' not in code:
             continue

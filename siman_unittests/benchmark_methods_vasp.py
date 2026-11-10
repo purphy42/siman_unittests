@@ -578,9 +578,11 @@ def run(report):
 
 
 def project_setting(name):
-    """Read one string setting from this project's project_conf.py."""
+    """Read one string setting from project_conf.py, or from the example."""
     import ast
     conf = HERE.parent / 'project_conf.py'
+    if not conf.is_file():
+        conf = HERE.parent / 'project_conf.example.py'
     if not conf.is_file():
         return None
     for line in conf.read_text(encoding='utf-8').splitlines():

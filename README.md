@@ -9,9 +9,8 @@ The saved outputs live in `siman_unittests/`. The tests read those files. They d
 Install SIMAN, then from this directory:
 
 ```bash
-python3 siman_unittests/benchmark.py --path=/path/to/siman --level=default
-python3 siman_unittests/benchmark.py --path=/path/to/siman --level=methods
-```
+python3 siman_unittests/benchmark.py --path=/path/to/siman --level=all
+```                      
 
 `--level=default` checks structure methods on `poscar/Li_mp-135.POSCAR-1` and `poscar/MnO_mp-19006.POSCAR-1`. `--level=methods` and `--level=all` also parse the saved VASP outputs and call the calculator methods. The report is written to `report.log` in this directory.
 
@@ -23,7 +22,7 @@ Copy `project_conf.example.py` to `project_conf.py` and set the paths on this co
 - `PATH2BADER` — Henkelman `bader` executable used by the Bader test.
 - `PATH2JMOL` and `PATH2VESTA` — viewer programs. Those two tests open a window and close it.
 - `CLUSTERS` — only needed to write or submit jobs. `siman_unittests.py` uses the cluster names `razor128` and `razor128_cp`.
-
+CALC_TYPE_REL, "full_chg", run=2,
 `project_conf.py` is gitignored. Leave API keys and home-directory paths there.
 
 ## Replace the saved calculations

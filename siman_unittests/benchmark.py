@@ -6,7 +6,7 @@ Run the SIMAN benchmarks.
 --level=default runs structure methods only.
 --level=methods adds the VASP calculator methods, including DOS and band plots.
 --level=all runs every calculator. VASP is the only calculator in this suite.
-The report is written to report.log.
+The report is written to report.log in the project directory.
 """
 
 import argparse
@@ -200,7 +200,7 @@ def main():
         from benchmark_methods_vasp import run as run_vasp
         run_vasp(report)
     text = report.text()
-    destination = HERE / 'report.log'
+    destination = HERE.parent / 'report.log'
     destination.write_text(text)
     print()
     print(text, end='')

@@ -12,6 +12,7 @@
 /project_conf.py
 
 # Output written while the tests run.
+/report.log
 siman_unittests/report.log
 siman_unittests/figs/
 siman_unittests/**/__pycache__/

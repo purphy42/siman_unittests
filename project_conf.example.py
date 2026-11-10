@@ -1,60 +1,33 @@
-# Copy this file to project_conf.py and fill in the paths on this computer.
-# Do not commit project_conf.py.
+# -*- coding: utf-8 -*-
+from __future__ import division, unicode_literals, absolute_import
 
 NEW_BATCH = True
 check_job = 0
 PBS_PROCS = False
 WALLTIME_LIMIT = True
-path_to_phonopy = 'phonopy'
+path_to_phonopy = '/home/arseniy/.local/bin/phonopy'
 
 CLUSTERS = {}
 DEFAULT_CLUSTER = 'razor128'
 AUTO_UPDATE_DB = True
-PATH2PROJECT = '/siman_unittests/'
-PATH_TO_PROJECT_ON_COMP = '/absolute/path/to/this/clone'
+PATH2PROJECT = '/siman_develop/'
+PATH_TO_PROJECT_ON_COMP = '/home/arseniy/Desktop/work/siman_develop/'
 
-CLUSTERS['razor128'] = {
-    'address': 'cluster-hostname',
-    'vasp_com': 'srun vasp_std',
-    'homepath': '/home/USER',
-    'schedule': 'SLURM',
-    'corenum': 16,
-    'partition': 'partition-name',
-    'scratch': '/scr/USER/',
-    'modules': 'module load vasp\nulimit -s unlimited\n',
-}
+CLUSTERS['razor128'] = {'address': 'razor128', 'vasp_com': 'srun vasp_std', 'homepath': '/home/a.burov', 'schedule': 'SLURM', 'corenum': 16, 'partition': 'zen4', 'scratch': '/scr/a.burov/', 'modules': 'source /etc/profile.d/modules.sh; module load zen4/vasp/5.4.4_openmpi_gcc_aocl; \nulimit -s unlimited\n'}
 
-CLUSTERS['razor128_cp'] = {
-    'address': 'cluster-hostname',
-    'vasp_com': 'srun vasp_std',
-    'homepath': '/home/USER',
-    'schedule': 'SLURM',
-    'corenum': 16,
-    'partition': 'partition-name',
-    'scratch': '/scr/USER/',
-    'modules': 'module load cp-vasp\nulimit -s unlimited\n',
-}
+CLUSTERS['razor128_cp'] = {'address': 'razor128', 'vasp_com': 'srun vasp_std', 'homepath': '/home/a.burov/', 'schedule': 'SLURM', 'corenum': 16, 'partition': 'zen4', 'scratch': '/scr/a.burov/', 'modules': 'source /etc/profile.d/modules.sh; module load zen4/cp-vasp/6.3.2; \nulimit -s unlimited\n'}
 
-CLUSTERS['razor128_res'] = {
-    'address': 'cluster-hostname',
-    'vasp_com': 'srun vasp_std',
-    'homepath': '/home/USER/siman_unittests/',
-    'schedule': 'SLURM',
-    'corenum': 16,
-    'partition': 'partition-name',
-    'scratch': '/scr/USER/',
-    'modules': 'module load vasp\nulimit -s unlimited\n',
-}
+CLUSTERS['razor128_res'] = {'address': 'razor128', 'vasp_com': 'srun vasp_std', 'homepath': '/home/a.burov/siman_develop/', 'schedule': 'SLURM', 'corenum': 16, 'partition': 'zen4', 'scratch': '/scr/a.burov/', 'modules': 'source /etc/profile.d/modules.sh; module load zen4/cp-vasp/6.3.2; \nulimit -s unlimited\n'}
 
-PATH2POTENTIALS = '/path/to/potpaw_PBE'
+PATH2POTENTIALS = '/home/arseniy/Desktop/vasp/potpaw_paw/potpaw_PBE_MPIE'
 PATH2EDITOR = 'subl'
 pmgkey = ''
 mpkey = ''
-PATH2DATABASE = '/absolute/path/to/this/clone'
-PATH2JMOL = '/path/to/jmol.sh'
-PATH2VESTA = '/path/to/VESTA'
-PATH2NEBMAKE = '/path/to/nebmake.pl'
-PATH2BADER = '/path/to/bader'
+PATH2DATABASE = '/home/arseniy/Desktop/work/siman_develop/'
+PATH2JMOL = '/home/arseniy/Desktop/Jmol/Jmol-16.4.7-binary/jmol-16.4.7/jmol.sh'
+PATH2VESTA = '/home/arseniy/Desktop/VESTA-gtk3/VESTA'
+PATH2NEBMAKE = '/home/arseniy/Desktop/study/comp_chemistry/final_project/vts/nebmake.pl'
+PATH2BADER = '/home/arseniy/Downloads/bader_lnx_64/bader'
 geo_folder = './'
 RAMDISK = None
 EXCLUDE_NODES = 0

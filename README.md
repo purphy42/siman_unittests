@@ -13,7 +13,7 @@ python3 siman_unittests/benchmark.py --path=/path/to/siman --level=default
 python3 siman_unittests/benchmark.py --path=/path/to/siman --level=methods
 ```
 
-`--level=default` checks structure methods on `poscar/Li_mp-135.POSCAR-1` and `poscar/MnO_mp-19006.POSCAR-1`. `--level=methods` and `--level=all` also parse the saved VASP outputs and call the calculator methods. The report is written to `siman_unittests/report.log`.
+`--level=default` checks structure methods on `poscar/Li_mp-135.POSCAR-1` and `poscar/MnO_mp-19006.POSCAR-1`. `--level=methods` and `--level=all` also parse the saved VASP outputs and call the calculator methods. The report is written to `report.log` in this directory.
 
 ## Configure
 

@@ -1,0 +1,23 @@
+SYSTEM =  SIMAN benchmark; no description for these set, see history
+ALGO = Normal
+EDIFF = 1e-05
+ENAUG = 600
+ENCUT = 400
+IBRION = -1
+ICHARG = 2
+ISMEAR = 1
+ISPIN = 1
+ISTART = 0
+KGAMMA = .TRUE.
+LCHARG = False
+LORBIT = 11
+LPLANE = .TRUE.
+LREAL = False
+LWAVE = False
+NBANDS = 3
+NELM = 60
+NPAR = 1
+NSW = 0
+PREC = Normal
+SIGMA = 0.1
+

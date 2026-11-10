@@ -1,0 +1,35 @@
+# Track the tests, the two input POSCARs, and the saved VASP outputs.
+/*
+
+!/.gitignore
+!/README.md
+!/project_conf.example.py
+!/siman_unittests.py
+!/siman_unittests/
+!/poscar/
+
+# This file holds machine paths and API keys. Keep the example instead.
+/project_conf.py
+
+# Output written while the tests run.
+siman_unittests/report.log
+siman_unittests/figs/
+siman_unittests/**/__pycache__/
+siman_unittests/**/*.pyc
+siman_unittests/**/*.png
+siman_unittests/**/*.pdf
+siman_unittests/**/*.cube
+
+# POTCAR files are licensed with VASP and are not part of this repository.
+siman_unittests/**/POTCAR
+siman_unittests/**/POTCAR.gz
+
+# Cluster scripts, logs, and products the tests do not read.
+siman_unittests/**/*.run
+siman_unittests/**/*.log
+siman_unittests/**/*_unfinished
+siman_unittests/**/ACF.dat
+siman_unittests/**/AVF.dat
+siman_unittests/**/BCF.dat
+siman_unittests/**/*.gz
+siman_unittests/Li_slab.cp/1.LOCPOT
